@@ -6,8 +6,8 @@
 
     ![](https://i.imgur.com/wb22xEF.png)
     -   Các bước trong quá trình mã hóa TripleDES chế độ EDE như sau:
-        -   Chọn một khóa bí mật có độ dài 168-bit.
-        -   Chia khóa thành 3 phần bằng nhau, mỗi phần có độ dài 56-bit.
+        -   Chọn một khóa bí mật có độ dài 192-bit.
+        -   Chia khóa thành 3 phần bằng nhau, mỗi phần có độ dài 64-bit.
         -   Sử dụng phần đầu tiên của khóa để mã hóa plaintext bằng thuật toán DES.
         -   Sử dụng phần thứ hai của khóa để giải mã kết quả từ bước trên bằng thuật toán DES.
         -   Sử dụng phần cuối cùng của khóa để mã hóa kết quả từ bước trên bằng thuật toán DES.
@@ -24,20 +24,18 @@
 
     -   Các bước trong quá trình mã hóa TripleDES chế độ EEE như sau:
 
-        -   Chọn một khóa bí mật có độ dài 168-bit.
-        -   Chia khóa thành 3 phần bằng nhau, mỗi phần có độ dài 56-bit.
+        -   Chọn một khóa bí mật có độ dài 192-bit.
+        -   Chia khóa thành 3 phần bằng nhau, mỗi phần có độ dài 64-bit.
         -   Sử dụng phần đầu tiên của khóa để mã hóa plaintext bằng thuật toán DES.
         -   Sử dụng phần thứ hai của khóa để mã hóa kết quả từ bước trên bằng thuật toán DES.
         -   Sử dụng phần cuối cùng của khóa để mã hóa kết quả từ bước trên bằng thuật toán DES.
         -   Kết quả sau khi mã hóa sẽ là ciphertext.
 
     -   Các bước trong quá trình giải mã TripleDES chế độ EEE như sau:
-
-        -   Chọn một khóa bí mật có độ dài 168-bit.
-        -   Chia khóa thành 3 phần bằng nhau, mỗi phần có độ dài 56-bit.
-        -   Sử dụng phần đầu tiên của khóa để giải mã ciphertext bằng thuật toán DES.
+    
+        -   Sử dụng phần thứ ba của khóa để giải mã ciphertext bằng thuật toán DES.
         -   Sử dụng phần thứ hai của khóa để giải mã kết quả từ bước trên bằng thuật toán DES.
-        -   Sử dụng phần cuối cùng của khóa để giải mã kết quả từ bước trên bằng thuật toán DES.
+        -   Sử dụng phần thứ nhất của khóa để giải mã kết quả từ bước trên bằng thuật toán DES.
         -   Kết quả sau khi giải mã sẽ là plaintext.
 
 -   Lưu ý rằng TripleDES là một thuật toán khá chậm vì nó phải thực hiện 3 lần mã hóa/giải mã trên cùng một khóa. Tuy nhiên, TripleDES vẫn được sử dụng rộng rãi trong các ứng dụng yêu cầu độ bảo mật cao nhưng không cần tốc độ mã hóa/giải mã nhanh như các ứng dụng tài chính, bảo mật thông tin, hệ thống thanh toán điện tử, lưu trữ dữ liệu, v.v.
